@@ -1,0 +1,721 @@
+.sc-visual{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 99px;
+    z-index: 10;
+    .swiper{
+        width: 100%;
+        height: 100%;
+    }
+    .swiper-wrapper{
+        display: -webkit-inline-box;
+    } 
+    .swiper-slide img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .control-box{
+        position: absolute;
+        bottom: 50px;
+        left: 220px;
+        width: 410px;
+        display: flex;
+        align-items: center;
+        z-index: 30;     
+    }
+    .fraction{
+        width: auto;
+    }
+    .arrow{
+        width: 8px;
+        height: 12px;
+        background-repeat: no-repeat;
+    }
+    .prev{
+        background: url(https://clickdk.com/images/vis_prev.png);
+        margin-right: 30px;
+    }
+    .num{
+        font-size: 15px;
+        color: #fff;
+        font-weight: 600;
+    }
+    .gauge{
+        width: 265px;
+        height: 2px;
+        background: $color-main;
+        margin-left: 10px;    
+    }
+    .gauge span{
+        width: 0%;
+        height: 100%;
+        background: #fff;
+        display: block;
+    }
+    .next{
+        background: url(https://clickdk.com/images/vis_next.png);
+        margin-left: 30px;
+    }
+    .autoplay{
+        width: 11px;
+        height: 16px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background: url(https://clickdk.com/images/vis_stop.png);
+        margin-left: 25px;
+        &.active{
+            background: url(https://clickdk.com/images/vis_start.png)
+        }
+    } 
+}
+
+.quick-menu{
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+    margin-top: -2px;
+    .quick-inner{
+        max-width: 1440px;
+        margin: 0 auto;    
+    }
+    .quick-list{
+        width: 100%;
+        display: flex;
+        text-align: center;
+    }    
+    .quick-item{
+        display: inline-block;
+        width: 25%;
+        line-height: 128px;
+        font-size: 20px;
+        color: #000;
+        border-right: 1px solid #ccc;
+    }
+    .menu{
+        color: $color-main;
+        font-size: 22px;
+        font-weight: 500;
+        border-left: 1px solid #ccc;
+    }
+    i{
+        position: relative; 
+        padding-left: 55px;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+    .reservation::before{
+        content: '';
+        width: 48px;
+        height: 48px;
+        position: absolute;
+        top: 50%;
+        margin-top: -24px;
+        left: -5px;
+        background-image: url(https://clickdk.com/images/quick-icon2.png);
+    }
+    .guide::before{
+        content: '';
+        width: 48px;
+        height: 48px;
+        position: absolute;
+        top: 50%;
+        margin-top: -24px;
+        left: -5px;
+        background-image: url(https://clickdk.com/images/quick-icon3.png);
+    }
+    .center::before{
+        content: '';
+        width: 48px;
+        height: 48px;
+        position: absolute;
+        top: 50%;
+        margin-top: -24px;
+        left: -5px;
+        background-image: url(https://clickdk.com/images/quick-icon4.png);
+    }
+}
+
+// quick
+
+.sc-project{
+    position: relative;
+    width: 100%;
+    background: #f1f1f1;
+    height: 880px;
+    overflow: hidden;
+    .project-inner{
+        position: relative;
+        margin: 0 auto;
+        padding: 200px 0 120px;
+        overflow: hidden;
+    }
+    .project-content{
+        width: calc(50% - 340px);
+        float: left;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .wrap{
+        width: 340px;
+        margin-right: 30px;
+        .title{
+            font-size: 48px;
+            font-weight: 500;
+            letter-spacing: -1px;
+            line-height: 1.2;
+            color: $color-main;
+        }
+        .txt{
+            position: relative;
+            margin-top: 35px;
+            padding-bottom: 35px;
+            font-size: 18px;
+            color: $color-sub2;
+            line-height: 1.6;
+            &::after{
+                content: '';
+                width: 60px;
+                height: 2px;
+                background: $color-main;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+        }
+        .nav-wrap{
+            margin-top: 35px;
+            display: flex;
+        }
+        .nav-wrap a{
+            width: 60px;
+            height: 60px;
+            display: block;
+        }
+        .btn-prev{
+            background: url(https://clickdk.com/images/pj-prev.gif) center center no-repeat;
+        }
+
+        .btn-next{
+            background: url(https://clickdk.com/images/pj-next.gif) center center no-repeat;
+        }
+    }
+    //content
+    
+    .project-img{
+        width: calc(50% + 340px);
+        float: right;  
+    } 
+    .swiper{
+        padding-bottom: 60px;
+    }    
+    .swiper-slide{
+        width: 360px;
+        margin-right: 40px;
+        cursor: pointer;
+        &:hover .hidden-text-item{
+            bottom: 0px;
+            opacity: 1;
+            box-shadow:10px 17px 40px 0px rgba(0,0,0,0.3);}
+    }
+    .txt-item{
+        padding: 40px;
+        background: #fff;
+    }
+    .title{
+        font-size: 22px;
+        color: $color-sub1;
+        font-weight: 500;
+        letter-spacing: -1px;
+        line-height: 1.2;
+    }
+    .info{
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        align-items: center;
+        gap: 15px;
+        em{
+            width: 68px;
+            color: #222;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        p{
+            margin-left: -64.5px;
+            font-weight: 300;
+            color: $color-sub2;
+            &.date-txt{font-weight: 400;}
+        }
+    }
+   
+    //txt-item
+
+    .hidden-text-item{
+        position: absolute;
+        left: 0;
+        bottom: -100px;
+        opacity: 0;
+        width: 100%;
+        padding: 40px;
+        background: #fff;
+        transition: all .3s;
+        .title{
+            font-size: 22px;
+            color: $color-sub1;
+            font-weight: 500;
+            letter-spacing: -1px;
+            line-height: 1.2;
+        }
+    }
+    .info{
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        align-items: center;
+        gap: 15px;
+        em{
+            width: 68px;
+            color: #222;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        p{
+            margin-left: -64.5px;
+            font-size: 15px;
+            color: $color-sub2;
+        }
+    }
+    .link-site{
+        display: block;
+        border: 1px solid #ddd;
+        text-align: center;
+        font-size: 13px;
+        height: 50px;
+        box-sizing: border-box;
+        line-height: 50px;
+        margin-top: 30px;
+        letter-spacing: -0.5px;
+        &:hover{
+            background: $color-main;
+            color: #fff;
+        }
+    }
+    //hidden-text-item
+    .mark-item{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        .circle{
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            border-radius: 100%;
+            color: #fff;
+            font-size: 13px;
+            padding: 14px 0;
+            text-align: center;
+            box-sizing: border-box;
+            line-height: 1.063rem;
+            vertical-align: middle;
+        }
+        .mark{
+            background: #002a60;
+            margin-right: 5px;
+        }
+        .heart{
+            background: #fff url(https://clickdk.com/images/like.png) center center no-repeat;
+        }
+    }
+}
+
+// project
+
+.sc-about{
+    position: relative;
+    height: 960px;
+    .about-tab{
+        position: absolute;
+        left: 50%;
+        top: 22%;
+        transform: translateX(-50%);
+        z-index: 10;
+        padding-right: 100px;
+    }
+    .tab-nav{
+        position: relative;
+        display: inline-block;
+        font-size: 22px;
+        cursor: pointer;
+        color:rgba(255,255,255,0.4);
+        font-weight: 700;
+        letter-spacing: -1px;
+        &:nth-child(1){
+            margin-right: 30px;
+        }
+        &:nth-child(2){
+            padding-left: 37px;
+            &::before{
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 5px;
+                height: 5px;
+                background: #fff;
+                margin-top: -2.5px;
+                transform: rotate(45deg);
+            }
+        }
+        &.current{
+            color: #fff;
+        }
+    }  
+    //about-tab
+
+    .about-content{
+        &>div{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 960px;
+            padding: 200px 0 308px;
+            &.tab-content{display: none;}
+            &.tab-content.current{display: block;}
+        }
+    }
+    .first{
+        background: url(https://clickdk.com/images/dk-bg.jpg) center center no-repeat;
+        background-size: cover;
+    }
+    .content-inner{
+        max-width: 1440px;
+        margin: 0 auto;
+        .title{
+            position: relative;
+            font-size: 48px;
+            color: #fff;
+            font-weight: 500;
+            letter-spacing: -0.5px;
+            padding-bottom: 40px;
+            &::after{
+                content: '';
+                width: 60px;
+                height: 2px;
+                background-color: #fff;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+            }
+        }
+        .sub-title{
+            font-size: 48px;
+            font-family: $font-sub;
+            color: #fff;
+            letter-spacing: -1px;
+            line-height: 1.4;
+            margin-top: 70px;
+            display: block;
+        }
+        .link-about{
+            display: block;
+            width: 240px;
+            height: 60px;
+            border: 1px solid #fff;
+            color: #fff;
+            text-align: center;
+            line-height: 60px;
+            margin-top: 60px;
+            &:hover{
+                background: $color-main;
+                border: none;
+            }
+        }
+    }
+    .sec{
+        background: url(https://clickdk.com/images/loge-bg.jpg) center center no-repeat;
+        background-size: cover;
+        .content-inner{
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+        .title{
+            position: relative;
+            font-size: 48px;
+            color: #fff;
+            font-weight: 500;
+            letter-spacing: -0.5px;
+            padding-bottom: 40px;
+            &::after{
+                content: '';
+                width: 60px;
+                height: 2px;
+                background-color: #fff;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+            }
+        }
+        .sub-title{
+            font-size: 48px;
+            font-family: $font-sub;
+            color: #fff;
+            letter-spacing: -1px;
+            line-height: 1.4;
+            margin-top: 70px;
+            display: block;
+        }
+        .link-about{
+            display: block;
+            width: 240px;
+            height: 60px;
+            border: 1px solid #fff;
+            color: #fff;
+            text-align: center;
+            line-height: 60px;
+            margin-top: 60px;
+            &:hover{
+                background: $color-main;
+                border: none;
+            }
+        }
+    }
+    //about-content
+}
+
+.sc-business{
+    position: relative;
+    .img-list{
+        width: 1440px;
+        position: absolute;
+        top: -142px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: 80px;
+    }
+    .img-item{
+        position: relative;
+        width: calc(50% - 40px);
+        overflow: hidden;
+    }
+
+    .link-business{
+        display: block;
+        position: relative;
+        height: 360px;
+        img{
+            transition: all .3s;
+        }
+        &:hover img{
+            transform: scale(1.2);
+        }
+    } 
+    .title-box{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 240px;
+        height: 120px;
+        background: #fff;
+        padding: 35.5px 40px;
+        .title{
+            font-size: 20px;
+            font-weight: 700;
+            color: #101010;
+        }
+        .sub-title{
+            font-size: 11px;
+            margin-top: 15px;
+            display: block;
+        }
+    }  
+}
+
+// business
+
+.sc-news{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    .news-inner{
+        position: relative;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 820px 0 123px;
+        display: flex;
+    }
+    .news-content{
+        width: 340px;
+        .title{
+            font-size: 48px;
+            font-weight: 500;
+            letter-spacing: -1px;
+            line-height: 1.2;
+        }
+        .txt{
+            position: relative;
+            margin-top: 35px;
+            padding-bottom: 35px;
+            font-size: 18px;
+            color: $color-sub2;
+            line-height: 1.6;
+            &::after{
+                content: '';
+                width: 60px;
+                height: 2px;
+                background: $color-main;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+        }
+        .link-more{
+            display: block;
+            width: 240px;
+            height: 60px;
+            border: 1px solid #ddd;
+            text-align: center;
+            line-height: 60px;
+            margin-top: 60px;
+            &:hover{
+                background: $color-main;
+                color: #fff;
+            }
+        }
+
+    } //new-content
+    .news-list{
+        width: calc(100% - 340px);
+        padding-right: 100px;
+    }
+    .news-item{
+        display: flex;
+        overflow: hidden;
+        &:nth-child(1){
+            padding-bottom: 40px;
+        }
+    }
+    .news-item+.news-item{
+        padding-top: 40px;
+        border-top: 1px solid #ddd;
+        padding-bottom: 40px;
+    }    
+    .link-news{
+        display: block;
+    }
+    .txt-box{
+        width: calc(100% - 240px);
+        padding: 29px 0 28px 40px;
+        .link-news{
+            display: block;
+        }
+        .title{
+            font-size: 22px;
+            color: $color-sub1;
+            font-weight: 500;
+            letter-spacing: -1px;
+            display: flex;
+            align-items: center;
+            @include ellipsis;
+            .sub-heading{
+                color: $color-main;
+                font-size: 15px;
+                margin-right: 10px;
+            }
+        }
+        .txt{
+            margin-top: 15px;
+            font-weight: 300;
+            letter-spacing: -.3px;
+            color: $color-sub2;
+            @include multi-ellipsis(2, 26px);
+        }       
+    }
+}
+
+// news
+
+.sc-center{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #d6cdbd;
+    overflow: hidden;
+    .center-inner{
+        position: relative;
+        margin: 0 auto;
+        padding: 158px 0 162px;
+        overflow: hidden;
+        .center-content{
+            width: calc(50% - 340px);
+            float: left;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .wrap{
+            width: 340px;
+            .title{
+                font-size: 48px;
+                font-weight: 500;
+                letter-spacing: -1px;
+                line-height: 1.2;
+                color: $color-main;
+            }
+            .txt{
+                position: relative;
+                margin-top: 35px;
+                padding-bottom: 35px;
+                font-size: 18px;
+                color: $color-sub2;
+                line-height: 1.6;
+                &::after{
+                    content: '';
+                    width: 60px;
+                    height: 2px;
+                    background: $color-main;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                }
+            }
+            .nav-wrap{
+                margin-top: 35px;
+                display: flex;
+            }
+            .nav-wrap a{
+                width: 60px;
+                height: 60px;
+                display: block;
+            }
+            .btn-prev{
+                background: url(https://clickdk.com/images/pj-prev.gif) center center no-repeat;
+            }
+    
+            .btn-next{
+                background: url(https://clickdk.com/images/pj-next.gif) center center no-repeat;
+            }
+        } 
+        //content
+
+        .center-youtube{
+            width: calc(50% + 340px);
+            float: right;
+            height: 360px;
+        }
+        .swiper{
+            width: 100%;
+            height: 100%;
+        }
+        .swiper-slide{
+            cursor: pointer;
+            width: 640px;
+            margin-right: 40px;
+        }
+    }
+}
+

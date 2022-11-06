@@ -1,0 +1,12 @@
+.blind{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+}
+
+.wrapper{
+  min-width: 1500px;
+}

@@ -1,0 +1,434 @@
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 99px;
+    z-index: 50;
+    background: #fff;
+    min-width: 1500px;
+
+    .header-inner{
+        position: relative;
+        padding: 0 20px;
+        text-align: center;
+    }
+    .logo{
+        position: absolute;
+        top: 24px;
+        .link-logo{
+            background-image: url(https://clickdk.com/images/logo-on.png);
+            display: block;
+            width: 248px;
+            height: 46px;
+        }
+    }
+    .gnb{
+        display: inline-block;
+    }
+    .gnb-list{
+        text-align: center;
+        display: flex;
+        height: 100%;
+    }
+    .gnb-item{
+        margin: 0 40px;
+        height: 100%;
+    }
+
+    .gnb-list .link-site{
+        display: block;
+        color: $color-main;
+        font-size: 20px;
+        font-weight: 500;
+        height: 100%;
+        line-height: 99px;
+        position: relative;
+        &::after{
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: $color-main;
+        }
+    }
+
+    .link-site:hover::after{
+        width: 100%;
+    }
+    
+    .sub-list{
+        position: absolute;
+        width: 100%;
+        top: 99px;
+        left: 0;
+        border-top: 1px solid #ccc;
+        background: #fff;
+        display: none;
+        &.active{display: flex;}
+    }
+
+    .sub-img{
+        flex: 1;
+        padding: 40px 40px 40px 0;
+        display: flex;
+        // justify-content: flex-end;
+    }
+
+    .sub-img img{
+        padding: 0 10px 0 20px;
+    }
+    .img-txt{
+        text-align: left;
+        margin-top: 80px;
+    }
+
+    .img-txt h3{
+        font-size: 22px;
+        color: $color-sub1;
+        font-weight: 500;
+    }
+    .img-txt p{
+        margin-top: 20px;
+        font-size: 15px;
+        color: #666;
+        line-height: 1.6;
+    }
+
+    .sub-text{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        background: #f5f5f5;
+        padding: 60px 0 0 80px;
+        text-align: left;
+    }
+
+    .sub-text2{
+        position: absolute;
+        top: 70px;
+        left: 70%;
+    }
+
+    .sub-item2:hover a{
+        color: $color-main;
+        font-weight: 500;
+    }
+
+    .sub-item2:hover a::after{
+        display: block;
+    }
+
+    .link-sub2{
+        display: block;
+        font-size: 15px;
+        color: $color-sub2;
+        text-align: left;
+        position: relative;
+        &::after{
+            content: '';
+            display: block;
+            width: 8px;
+            height: 12px;
+            margin-top: -5px;
+            position: absolute;
+            top: 50%;
+            margin-left: 100px;
+            background: url(https://clickdk.com/images/gnb-icon.png) center center no-repeat;
+            display: none;
+        }
+    }
+
+    .sub-item+.sub-item{
+        margin-top: 20px;
+    }
+
+    .sub-item:hover a{
+        color: $color-main;
+        font-weight: 500;
+    }
+
+    .sub-item:hover a::after{
+        display: block;
+    }
+
+    .link-sub{
+        display: block;
+        font-size: 15px;
+        color: $color-sub2;
+        text-align: left;
+        position: relative;
+        &::after{
+            content: '';
+            display: block;
+            width: 8px;
+            height: 12px;
+            margin-top: -5px;
+            position: absolute;
+            top: 50%;
+            margin-left: 100px;
+            background: url(https://clickdk.com/images/gnb-icon.png) center center no-repeat;
+            display: none;
+        }
+    }
+
+    .util-area{
+        display: flex;
+        height: 40px;
+        align-items: center;
+        position: absolute;
+        top: 30px;
+        right: 20px;
+    }
+         
+    .icon{
+        width: 20px;
+        height: 20px;
+        display: block;
+    }
+    .search-box1{
+        position: absolute;
+        width: 200px;
+        height: 40px;
+        top: 50%;
+        right: 184px;
+        border: 1px solid $color-main;
+        border-radius: 20px;
+        padding-right: 50px;
+        margin-top: -20px;
+        overflow: hidden;
+        background: #fff;
+        z-index: 1;
+        display: none;
+        animation: fade .5s;
+        @keyframes fade{
+            0%{opacity: 0;}
+            100%{opacity: 40;}
+        }
+        &.active{display: block;}
+    }
+    .search-bar{
+        display: block;
+        width: 100%;
+        height: 38px;
+        outline: none;
+        border: none;
+        padding: 1px 2px 1px 10px;
+        font-size: 14px;
+        font-weight: 300;
+    }
+    .serch-icon{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: url(https://clickdk.com/images/search-on.png) center center no-repeat;
+        width: 50px;
+        height: 38px;
+    }
+
+    .btn-search{
+        background-image: url(https://clickdk.com/images/search-on.png);
+        z-index: 5;
+    }
+    
+    .btn-mypage{
+        background-image: url(https://clickdk.com/images/my-on.png);
+        margin-left: 30px;
+    }
+    .btn-menu{
+        background-image: url(https://clickdk.com/images/ham-on.png);
+        margin-left: 20px;
+        padding: 1px 6px;
+        width: 40px;
+        height: 40px;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    .btn-login{
+        width: 80px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 12px;
+        font-weight: 700;
+        border: 1px solid $color-main;
+        text-align: center;
+        margin-left: 10px;
+    }
+}
+
+// menu
+
+.menu-area{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    right: -100%;
+    z-index: 55;
+    &.active{right: 0; transition: all .3s;}
+    .menu-dimmed{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.7);
+        display: none;
+        &.active{display: block;}
+    }
+    .menu-inner{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 486px;
+        height: 100%;
+        background: #fff;
+    }   
+    .menu-list{
+        padding-left: 87px;
+    }
+    .menu-item+.menu-item{
+        margin-top: 28px;
+    }
+    .menu-item{
+    }
+    .depth{
+        display: block;
+        font-size: 26px;
+        font-weight: 300;
+        color: $color-sub1;
+        padding: 14px 0;
+        letter-spacing: -1px;
+        &.active{
+            color: $color-main;
+            font-weight: 700;
+        }
+    }
+    .sub-menu-list{
+        position: absolute;
+        top: 100px;
+        left: 67%;
+        transition: all .3s;
+        display: none;
+        &.show{display: block;}
+        .sub-menu-item{
+            &:hover a::after{
+                display: block;
+            }
+            &:hover a{
+                color: $color-main;
+                font-weight: 500;
+            }
+            .link-site{
+                color: $color-sub2;
+                font-weight: 300;
+                display: inline-block;
+                padding: 13px 0;
+                letter-spacing: -.5px;
+                position: relative;
+                &::after{
+                   content:''; 
+                   position:absolute; 
+                   bottom:8px; 
+                   left:0; 
+                   width:100%; 
+                   height:1px; 
+                   background:$color-main;
+                   display: none;
+                }
+            }
+
+        }
+    }
+    .util-area{
+        position: relative;
+        height: 100px;
+    }
+    .util-list{
+        display: flex;
+        align-items: center;
+        height: 40px;
+        position: absolute;
+        top: 0;
+        right: 60px;
+    }
+    .search-box2{
+        position: absolute;
+        width: 200px;
+        height: 40px;
+        top: 50%;
+        right: 184px;
+        border: 1px solid $color-main;
+        border-radius: 20px;
+        padding-right: 50px;
+        margin-top: -20px;
+        overflow: hidden;
+        background: #fff;
+        z-index: 1;
+        display: none;
+        animation: fade .5s;
+        @keyframes fade{
+            0%{opacity: 0;}
+            100%{opacity: 41;}
+        }
+    }
+    .search-bar{
+        display: block;
+        width: 100%;
+        height: 38px;
+        outline: none;
+        border: none;
+        padding: 1px 2px 1px 10px;
+        font-size: 14px;
+        font-weight: 300;
+    }
+    .serch-icon{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: url(https://clickdk.com/images/search-on.png) center center no-repeat;
+        width: 50px;
+        height: 38px;
+    }
+    .icon{
+        width: 20px;
+        height: 20px;
+        display: block;
+    }
+    .btn-search{
+        background-image: url(https://clickdk.com/images/search-on.png);
+        z-index: 5;
+    }
+    
+    .btn-mypage{
+        background-image: url(https://clickdk.com/images/my-on.png);
+        margin-left: 30px;
+    }
+    .btn-close{
+        background-image: url(https://clickdk.com/images/sitemap-close.png);
+        margin-left: 20px;
+        width: 40px;
+        height: 40px;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    .btn-login{
+        width: 80px;
+        line-height: 40px;
+        font-size: 12px;
+        font-weight: 700;
+        border: 1px solid $color-main;
+        text-align: center;
+        margin-left: 10px;
+    }
+}
+
+
+
+
+
